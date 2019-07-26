@@ -6,7 +6,7 @@ import Search from "./Search";
 import SearchResult from "./SearchResult";
 
 const App = () => {
-  const [[products], setProducts] = useState("");
+  const [products, setProducts] = useState("");
 
   const search = searchValue => {
     fetch(
@@ -21,8 +21,6 @@ const App = () => {
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(err => console.log(err));
-
-    console.log(products);
   };
 
   return (
